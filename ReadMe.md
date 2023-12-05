@@ -33,6 +33,9 @@ While the original repository uses weird numbers
 for product version, this repository uses an independent approach to version 
 numbers.
 
+Benchmark is using a bad method for time calculation. Moreover, it is 
+absolutely unportable to other CPU architectures. This is why it is ignored.
+
 # License
 
 Information about license can be found in the `License` file.

@@ -3,7 +3,7 @@
 cmake_minimum_required(VERSION 3.26)
 
 set(LIBRARY_VERSION_MAJOR 0)
-set(LIBRARY_VERSION_MINOR 1)
+set(LIBRARY_VERSION_MINOR 2)
 set(LIBRARY_VERSION_PATCH 0)
 set(LIBRARY_VERSION_TWEAK 0)
 set(LIBRARY_VERSION_FULL ${LIBRARY_VERSION_MAJOR}.${LIBRARY_VERSION_MINOR}.${LIBRARY_VERSION_PATCH}.${LIBRARY_VERSION_TWEAK})
@@ -35,7 +35,7 @@ include(GNUInstallDirs)
 #   ls -1 src/blake2/*.c
 set(SOURCE_FILES_LIST
         src/argon2.c
-        src/bench.c
+        #src/bench.c # Unportable & shitty code from 1990's for a single core CPU.
         src/core.c
         src/encoding.c
         #src/genkat.c # ???
