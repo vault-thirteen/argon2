@@ -38,10 +38,6 @@ numbers.
 Benchmark is using a bad method for time calculation. Moreover, it is 
 absolutely unportable to other CPU architectures. This is why it is ignored.
 
-# License
-
-Information about license can be found in the `License` file.
-
 # Usage
 
 To build the project you need the `CMake` tool of the latest version.
@@ -124,6 +120,16 @@ not intuitive.
 
 
 5. Note that _WASM_ is a virtual ISA which is neither _Intel x86_ nor _AMD64_.
+
+# License
+
+This repository uses some of the original source files which have several 
+different licenses, such as the _CC0 License_ and the _Apache 2.0 License_. 
+More information about them can be found in the original repository:   
+https://github.com/P-H-C/phc-winner-argon2#intellectual-property . All the 
+original source files are using licenses which are compatible with the 
+_GPL-3.0 License_. Files of this repository are using the _GPL-3.0 License_.
+
 
 # Feedback
 
