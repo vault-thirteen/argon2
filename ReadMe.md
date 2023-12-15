@@ -7,6 +7,8 @@ https://github.com/P-H-C/phc-winner-argon2
 The main purpose of this repository is:
 - To add support for cross-platform compilation with the help of `CMake` tool;
 - To get rid of platform-dependent compilation tools, such as `make`.
+- To add a script for building a _DLL_ for _Windows_ operating system.
+- To add a script for building an executable file for _Web Assembly_ (_WASM_).
 
 # List of changes
 
@@ -64,6 +66,64 @@ Default value is: _False_.
 This setting allows to enable support for `version.rc` files used on _Microsoft 
 Windows_ operating system.  
 Default value is: _False_.
+
+# Building a DLL in MinGW
+
+To build the library as a dynamic-link library (DLL) for the _Windows_ 
+operating system you can use the _MSYS2_ environment and its _MINGW64_ feature. 
+This process is cross-platform and does not require to install such 
+heavy-weight tools as _Microsoft Visual Studio 2022_. The steps are described 
+below.
+
+1. Install the _MSYS2_.
+   * https://www.msys2.org/
+
+
+2. Open the _MSYS2 MINGW64_ terminal.
+   * Start the `mingw64.exe` tool from your `msys64` folder.
+
+
+3. Update the _MSYS2_ environment.
+   * `$ pacman -Suy`
+   * Re-run this command again after the terminal shuts down.
+
+
+4. Install the _CMake_, _Make_ and _GCC_ toolchain.
+   * `$ pacman -S mingw-w64-x86_64-cmake`
+   * `$ pacman -S mingw-w64-x86_64-make`
+   * `$ pacman -S mingw-w64-x86_64-toolchain`
+
+
+5. Build the project.
+   * `$ cd <ThisRepoFolder>`
+   * `$ cmake . -B "_BUILD_" -G "MinGW Makefiles"`
+   * `$ cmake --build _BUILD_`
+
+# Building for WASM
+
+To build an executable file for a _Web Assembly_ you can follow these steps. 
+
+1. Install the _Emscripten_ SDK.
+   * https://emscripten.org
+   * You will need a lot of patience while the installer is quite buggy and 
+not intuitive.   
+
+
+2. Perform the steps 1, 2, 3 and 4 from the previous scenario.
+
+
+3. Set the _Emscripten_'s environment variables.
+   * `$ cd <EmscptenSdkFolder>`
+   * `$ source ./emsdk_env.sh`
+   * `$ echo $PATH`
+
+
+4. Build the project.
+   * `$ cd <ThisRepoFolder>`
+   * `$ ./build_wasm.bat.sh`
+
+
+5. Note that _WASM_ is a virtual ISA which is neither _Intel x86_ nor _AMD64_.
 
 # Feedback
 
