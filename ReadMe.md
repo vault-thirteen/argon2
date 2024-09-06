@@ -121,6 +121,20 @@ not intuitive.
 
 5. Note that _WASM_ is a virtual ISA which is neither _Intel x86_ nor _AMD64_.
 
+# Building for WASM in Emscripten Docker container
+
+To build an executable file for a _Web Assembly_ in an Emscripten Docker 
+container you can follow these steps.
+
+1. Build an Emscripten Docker container.
+   * It can be found in the 'auxie' repository, inside the 'Development Infrastructure' folder.
+
+
+2. Run an Emscripten Docker container using its script.
+
+
+3. Being inside the container, run the `build_argon2_wasm.sh` script.
+
 # License
 
 This repository uses some of the original source files which have several 
