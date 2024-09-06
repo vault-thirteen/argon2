@@ -1,10 +1,10 @@
-# CMake version 3.26 is outdated but is still used by some software.
+# CMake version 3.29 is outdated but is still used by some software.
 # You should always use the latest available version of the CMake tool.
-cmake_minimum_required(VERSION 3.26)
+cmake_minimum_required(VERSION 3.29)
 
 set(LIBRARY_VERSION_MAJOR 0)
 set(LIBRARY_VERSION_MINOR 2)
-set(LIBRARY_VERSION_PATCH 0)
+set(LIBRARY_VERSION_PATCH 1)
 set(LIBRARY_VERSION_TWEAK 0)
 set(LIBRARY_VERSION_FULL ${LIBRARY_VERSION_MAJOR}.${LIBRARY_VERSION_MINOR}.${LIBRARY_VERSION_PATCH}.${LIBRARY_VERSION_TWEAK})
 

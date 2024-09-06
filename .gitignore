@@ -1,4 +1,5 @@
 .idea
+cmake-build-release
 wasm/*.js
 wasm/*.wasm
 _BUILD_

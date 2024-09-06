@@ -1,4 +1,4 @@
-emcmake cmake . -B "_BUILD_" -G "MinGW Makefiles"
+emcmake cmake . -B "_BUILD_"
 emmake cmake --build _BUILD_
 cd _BUILD_
 
